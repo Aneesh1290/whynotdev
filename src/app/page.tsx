@@ -114,7 +114,8 @@ export default function Home() {
               {[
                 { id: '01', title: 'Parshuram Seashore Cafe and Rooms', type: 'Business Website', desc: 'A clean, modern website for a local business to represent their services and build trust online.', link: 'https://parashuramhomestay.com/', image: '/parshuramhomestay.png' },
                 { id: '02', title: 'NexTap', type: 'NFC Product Platform', desc: 'E-commerce platform for NFC review cards and smart products for modern businesses.', link: 'https://nextap.whynotdev.in/', image: '/nextap.png' },
-                { id: '03', title: 'Havoc EFS', type: 'Business Website', desc: 'Educational website for a young learners program focused on aeromodelling, RC flying, flight simulation, RC cars, and F1 & GT sim racing.', link: 'https://havocefs.in/', image: '/havocefs.png' }
+                { id: '03', title: 'Havoc EFS', type: 'Business Website', desc: 'Educational website for a young learners program focused on aeromodelling, RC flying, flight simulation, RC cars, and F1 & GT sim racing.', link: 'https://havocefs.in/', image: '/havocefs.png' },
+                { id: '04', title: 'Havoc Aviation', type: 'Business Website', desc: 'A professional and comprehensive digital platform for aviation services, flight training, and aerial solutions.', link: 'https://havocaviation.in/', image: '/havocaviation.png' }
               ].map((project) => (
                 <div key={project.id} style={{ display: 'flex', flexDirection: 'column' }}>
                   
