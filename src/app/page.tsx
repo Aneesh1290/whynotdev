@@ -112,12 +112,20 @@ export default function Home() {
             {/* Right Column (Project Cards Grid) */}
             <div className="responsive-grid-3" style={{ flex: 1, display: 'grid', gap: '24px' }}>
               {[
-                { id: '01', title: 'Parshuram Seashore Cafe and Rooms', type: 'Business Website', desc: 'A clean, modern website for a local business to represent their services and build trust online.', link: 'https://parashuramhomestay.com/', image: '/parshuramhomestay.png' },
-                { id: '02', title: 'NexTap', type: 'NFC Product Platform', desc: 'E-commerce platform for NFC review cards and smart products for modern businesses.', link: 'https://nextap.whynotdev.in/', image: '/nextap.png' },
+                { id: '01', title: 'Havoc Sim Podium', type: 'Business Website', desc: 'Premium racing and flight simulator experiences in Bengaluru. Complete online booking and immersive showcase.', link: 'https://www.havocsim.in/', image: '/havocsim.jpg' },
+                { id: '02', title: 'Havoc RC Funzone', type: 'Business Website', desc: 'Destination for RC racing, drones, miniature trains, and ticket/slot bookings.', link: 'https://havocrcfunzone.in/', image: '/havocrcfunzone.jpg' },
                 { id: '03', title: 'Havoc EFS', type: 'Business Website', desc: 'Educational website for a young learners program focused on aeromodelling, RC flying, flight simulation, RC cars, and F1 & GT sim racing.', link: 'https://havocefs.in/', image: '/havocefs.png' },
-                { id: '04', title: 'Havoc Aviation', type: 'Business Website', desc: 'A professional and comprehensive digital platform for aviation services, flight training, and aerial solutions.', link: 'https://havocaviation.in/', image: '/havocaviation.png' }
+                { id: '04', title: 'Havoc Aviation', type: 'Business Website', desc: 'A professional and comprehensive digital platform for aviation services, flight training, and aerial solutions.', link: 'https://havocaviation.in/', image: '/havocaviation.png' },
+                { id: '05', title: 'Parshuram Seashore Cafe and Rooms', type: 'Business Website', desc: 'A clean, modern website for a local business to represent their services and build trust online.', link: 'https://parashuramhomestay.com/', image: '/parshuramhomestay.png' },
+                { id: '06', title: 'NexTap', type: 'NFC Product Platform', desc: 'E-commerce platform for NFC review cards and smart products for modern businesses.', link: 'https://nextap.whynotdev.in/', image: '/nextap.png' }
               ].slice(0, 3).map((project) => (
-                <div key={project.id} style={{ display: 'flex', flexDirection: 'column' }}>
+                <a 
+                  key={project.id} 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+                >
                   
                   {/* Thumbnail Image */}
                   <div style={{ height: '240px', backgroundColor: '#111', borderTop: '1px solid #222', borderLeft: '1px solid #222', borderRight: '1px solid #222', position: 'relative', overflow: 'hidden' }}>
@@ -136,12 +144,12 @@ export default function Home() {
                     
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#888', marginBottom: '40px', lineHeight: 1.8, flexGrow: 1 }}>{project.desc}</p>
                     
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', backgroundColor: 'transparent', color: '#aaa', padding: '4px 0', fontWeight: 600, fontSize: '0.65rem', letterSpacing: '2px', cursor: 'pointer', border: 'none', borderBottom: '1px solid #333', alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: '16px', textDecoration: 'none' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', backgroundColor: 'transparent', color: '#aaa', padding: '4px 0', fontWeight: 600, fontSize: '0.65rem', letterSpacing: '2px', borderBottom: '1px solid #333', alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: '16px' }}>
                       VISIT WEBSITE <span>&rarr;</span>
-                    </a>
+                    </div>
                   </div>
                   
-                </div>
+                </a>
               ))}
             </div>
           </div>
