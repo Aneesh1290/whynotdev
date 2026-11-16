@@ -3,12 +3,12 @@ import Footer from '@/components/Footer';
 
 export default function Work() {
   const projects = [
-    { id: '01', title: 'Havoc Sim Podium', type: 'Business Website', desc: 'Premium racing and flight simulator experiences in Bengaluru. Complete online booking and immersive showcase.', link: 'https://www.havocsim.in/', image: '/havocsim.jpg' },
-    { id: '02', title: 'Havoc RC Funzone', type: 'Business Website', desc: 'Destination for RC racing, drones, miniature trains, and ticket/slot bookings.', link: 'https://havocrcfunzone.in/', image: '/havocrcfunzone.jpg' },
-    { id: '03', title: 'Havoc EFS', type: 'Business Website', desc: 'Educational website for a young learners program focused on aeromodelling, RC flying, flight simulation, RC cars, and F1 & GT sim racing.', link: 'https://havocefs.in/', image: '/havocefs.png' },
-    { id: '04', title: 'Havoc Aviation', type: 'Business Website', desc: 'A professional and comprehensive digital platform for aviation services, flight training, and aerial solutions.', link: 'https://havocaviation.in/', image: '/havocaviation.png' },
-    { id: '05', title: 'Parshuram Seashore Cafe and Rooms', type: 'Business Website', desc: 'A clean, modern website for a local business to represent their services and build trust online.', link: 'https://parashuramhomestay.com/', image: '/parshuramhomestay.png' },
-    { id: '06', title: 'NexTap', type: 'NFC Product Platform', desc: 'E-commerce platform for NFC review cards and smart products for modern businesses.', link: 'https://nextap.whynotdev.in/', image: '/nextap.png' }
+    { id: '01', title: 'NexTap', type: 'NFC Product Platform', desc: 'E-commerce platform for NFC review cards and smart products for modern businesses.', link: 'https://nextap.whynotdev.in/', image: '/nextap.png' },
+    { id: '02', title: 'Havoc Sim Podium', type: 'Business Website', desc: 'Premium racing and flight simulator experiences in Bengaluru. Complete online booking and immersive showcase.', link: 'https://www.havocsim.in/', image: '/havocsim.jpg', objectPosition: 'left center' },
+    { id: '03', title: 'Havoc RC Funzone', type: 'Business Website', desc: 'Destination for RC racing, drones, miniature trains, and ticket/slot bookings.', link: 'https://havocrcfunzone.in/', image: '/havocrcfunzone.jpg' },
+    { id: '04', title: 'Havoc EFS', type: 'Business Website', desc: 'Educational website for a young learners program focused on aeromodelling, RC flying, flight simulation, RC cars, and F1 & GT sim racing.', link: 'https://havocefs.in/', image: '/havocefs.png' },
+    { id: '05', title: 'Havoc Aviation', type: 'Business Website', desc: 'A professional and comprehensive digital platform for aviation services, flight training, and aerial solutions.', link: 'https://havocaviation.in/', image: '/havocaviation.png' },
+    { id: '06', title: 'Parshuram Seashore Cafe and Rooms', type: 'Business Website', desc: 'A clean, modern website for a local business to represent their services and build trust online.', link: 'https://parashuramhomestay.com/', image: '/parshuramhomestay.png' }
   ];
 
   return (
@@ -39,7 +39,16 @@ export default function Work() {
               
               {/* Thumbnail Image */}
               <div style={{ height: '240px', backgroundColor: '#111', borderTop: '1px solid #222', borderLeft: '1px solid #222', borderRight: '1px solid #222', position: 'relative', overflow: 'hidden' }}>
-                 <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                 <img 
+                   src={project.image} 
+                   alt={project.title} 
+                   style={{ 
+                     width: '100%', 
+                     height: '100%', 
+                     objectFit: 'cover', 
+                     objectPosition: project.objectPosition || 'center' 
+                   }} 
+                 />
               </div>
               
               {/* Card Content Box */}
